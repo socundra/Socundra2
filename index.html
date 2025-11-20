@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tablero Socundra</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="area">
+    <div id="grid"></div>
+    <div id="miniWrap"></div>
+  </div>
+</div>
+
+<div id="admin-tools">
+  <h3>Modo administrador</h3>
+
+  <div id="hud">
+    Saldo: <span id="hud-saldo">0</span> €
+  </div>
+
+  <input id="admin-saldo" type="number" placeholder="Saldo a poner">
+  <button id="btnSaldo">Aplicar</button>
+</div>
+
+<div id="dice-box">
+  <button id="btnDados">🎲 Tirar dados</button>
+  <div id="resultado-dados">Resultado: -</div>
+</div>
+<!-- VENTANA DE COMPRA -->
+<div id="compra-box" class="hidden">
+  <div id="compra-contenido">
+    <h2>Comprar casilla</h2>
+    <p id="compra-info"></p>
+
+    <button id="btnComprar">Comprar</button>
+    <button id="btnCancelar">Cancelar</button>
+  </div>
+</div>
+
+<!-- IMPORTANTE: esto va SIEMPRE AL FINAL DEL BODY -->
+<!-- Ventana de compra -->
+<div id="compraBox" class="compra-oculto">
+  <div id="compraContenido">
+    <h3 id="compraTitulo">Comprar casilla</h3>
+    <p id="compraPrecio"></p>
+
+    <button id="btnComprar">Comprar</button>
+    <button id="btnCancelarCompra">Cancelar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
